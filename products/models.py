@@ -8,6 +8,5 @@ class Product(models.Model):
     store = models.CharField(max_length=100, default=None, null=True)
     category = models.CharField(max_length=100, default=None, null=True)
     gluten_free = models.BooleanField(default=False)
-    quantity = models.IntegerField(default=0)
     price = models.FloatField(default=0)
     date = models.DateField(default=datetime.today(), null=False)
