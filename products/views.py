@@ -16,3 +16,8 @@ def details(request, id):
     template = loader.get_template('product_details.html')
     context = {'product': product}
     return HttpResponse(template.render(context, request))
+
+
+def home(request):
+    template = loader.get_template('home.html')
+    return HttpResponse(template.render())

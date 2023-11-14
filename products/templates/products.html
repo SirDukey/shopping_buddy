@@ -1,14 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>product list</title>
-</head>
-<body>
-<ul>
+{% extends "base.html" %}
+
+{% block title %}
+  Product list
+{% endblock %}
+
+
+{% block content %}
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>store</th>
+        <th>gluten-free</th>
+    </tr>
     {% for product in product_list %}
-        <li><a href="product_details/{{ product.id }}">{{ product.name }}</a></li>
+    <tr>
+        <td><li><a href="product_details/{{ product.id }}">{{ product.name }}</a></li></td>
+        <td>{{ product.store}} </td>
+        <td>{{ product.gluten_free }}</td>
+    </tr>
     {% endfor %}
-</ul>
-</body>
-</html>
+</table>
+<br/>
+
+<p>Back to <a href="/">home</a></p>
+{% endblock %}
