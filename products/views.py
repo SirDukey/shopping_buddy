@@ -4,10 +4,10 @@ from django.template import loader
 from .models import Product
 
 
-def products(request):
+def product_list(request):
     product_list = Product.objects.all().values()
     context = {'product_list': product_list}
-    template = loader.get_template('products.html')
+    template = loader.get_template('product_list.html')
     return HttpResponse(template.render(context, request))
 
 

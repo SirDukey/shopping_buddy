@@ -6,8 +6,11 @@
 
 
 {% block content %}
+    <a href="/" class="btn btn-outline-primary">home</a>
+    <a href="/product_list" class="btn btn-outline-primary">product list</a>
 
-    <h3>{{ product.name }}</h3>
+
+<h3>{{ product.name }}</h3>
 <table>
     <tr><td>brand</td><td>{{ product.brand }}</td></tr>
     <tr><td>store</td><td>{{ product.store }}</td></tr>
@@ -17,10 +20,5 @@
     <tr><td>date</td><td>{{ product.date }}</td></tr>
 </table>
 <br/>
-
-
-
-    <p>Back to <a href="/products">products</a></p>
-    <p>Back to <a href="/">home</a></p>
 
 {% endblock %}
